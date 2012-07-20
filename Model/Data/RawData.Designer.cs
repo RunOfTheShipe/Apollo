@@ -30,9 +30,9 @@ namespace Apollo.Model.Data {
         
         private ResultDataTable tableResult;
         
-        private global::System.Data.DataRelation relationFK_Runner_Result;
-        
         private global::System.Data.DataRelation relationFK_Race_Result;
+        
+        private global::System.Data.DataRelation relationFK_Runner_Result;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -246,8 +246,8 @@ namespace Apollo.Model.Data {
                     this.tableResult.InitVars();
                 }
             }
-            this.relationFK_Runner_Result = this.Relations["FK_Runner_Result"];
             this.relationFK_Race_Result = this.Relations["FK_Race_Result"];
+            this.relationFK_Runner_Result = this.Relations["FK_Runner_Result"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -265,13 +265,6 @@ namespace Apollo.Model.Data {
             this.tableResult = new ResultDataTable();
             base.Tables.Add(this.tableResult);
             global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_Runner_Result", new global::System.Data.DataColumn[] {
-                        this.tableRunner.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableResult.IDColumn});
-            this.tableResult.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_Race_Result", new global::System.Data.DataColumn[] {
                         this.tableRace.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableResult.IDColumn});
@@ -279,14 +272,21 @@ namespace Apollo.Model.Data {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            this.relationFK_Runner_Result = new global::System.Data.DataRelation("FK_Runner_Result", new global::System.Data.DataColumn[] {
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Runner_Result", new global::System.Data.DataColumn[] {
                         this.tableRunner.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableResult.IDColumn}, false);
-            this.Relations.Add(this.relationFK_Runner_Result);
+                        this.tableResult.IDColumn});
+            this.tableResult.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationFK_Race_Result = new global::System.Data.DataRelation("FK_Race_Result", new global::System.Data.DataColumn[] {
                         this.tableRace.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableResult.IDColumn}, false);
             this.Relations.Add(this.relationFK_Race_Result);
+            this.relationFK_Runner_Result = new global::System.Data.DataRelation("FK_Runner_Result", new global::System.Data.DataColumn[] {
+                        this.tableRunner.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableResult.IDColumn}, false);
+            this.Relations.Add(this.relationFK_Runner_Result);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -703,7 +703,7 @@ namespace Apollo.Model.Data {
             
             private global::System.Data.DataColumn columnRaceDate;
             
-            private global::System.Data.DataColumn columnDistance;
+            private global::System.Data.DataColumn columnDistanceMiles;
             
             private global::System.Data.DataColumn columnStartTime;
             
@@ -760,9 +760,9 @@ namespace Apollo.Model.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DistanceColumn {
+            public global::System.Data.DataColumn DistanceMilesColumn {
                 get {
-                    return this.columnDistance;
+                    return this.columnDistanceMiles;
                 }
             }
             
@@ -819,12 +819,12 @@ namespace Apollo.Model.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RaceRow AddRaceRow(System.DateTime RaceDate, double Distance, System.DateTime StartTime, bool ChipTimed) {
+            public RaceRow AddRaceRow(System.DateTime RaceDate, double DistanceMiles, System.DateTime StartTime, bool ChipTimed) {
                 RaceRow rowRaceRow = ((RaceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         RaceDate,
-                        Distance,
+                        DistanceMiles,
                         StartTime,
                         ChipTimed};
                 rowRaceRow.ItemArray = columnValuesArray;
@@ -858,7 +858,7 @@ namespace Apollo.Model.Data {
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
                 this.columnRaceDate = base.Columns["RaceDate"];
-                this.columnDistance = base.Columns["Distance"];
+                this.columnDistanceMiles = base.Columns["DistanceMiles"];
                 this.columnStartTime = base.Columns["StartTime"];
                 this.columnChipTimed = base.Columns["ChipTimed"];
             }
@@ -870,8 +870,8 @@ namespace Apollo.Model.Data {
                 base.Columns.Add(this.columnID);
                 this.columnRaceDate = new global::System.Data.DataColumn("RaceDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRaceDate);
-                this.columnDistance = new global::System.Data.DataColumn("Distance", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDistance);
+                this.columnDistanceMiles = new global::System.Data.DataColumn("DistanceMiles", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDistanceMiles);
                 this.columnStartTime = new global::System.Data.DataColumn("StartTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStartTime);
                 this.columnChipTimed = new global::System.Data.DataColumn("ChipTimed", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -884,8 +884,8 @@ namespace Apollo.Model.Data {
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
                 this.columnRaceDate.AllowDBNull = false;
-                this.columnDistance.AllowDBNull = false;
-                this.columnDistance.DefaultValue = ((double)(0D));
+                this.columnDistanceMiles.AllowDBNull = false;
+                this.columnDistanceMiles.DefaultValue = ((double)(0D));
                 this.columnStartTime.AllowDBNull = false;
                 this.columnChipTimed.AllowDBNull = false;
                 this.columnChipTimed.DefaultValue = ((bool)(false));
@@ -1490,12 +1490,12 @@ namespace Apollo.Model.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Distance {
+            public double DistanceMiles {
                 get {
-                    return ((double)(this[this.tableRace.DistanceColumn]));
+                    return ((double)(this[this.tableRace.DistanceMilesColumn]));
                 }
                 set {
-                    this[this.tableRace.DistanceColumn] = value;
+                    this[this.tableRace.DistanceMilesColumn] = value;
                 }
             }
             
@@ -1603,23 +1603,23 @@ namespace Apollo.Model.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RunnerRow RunnerRow {
-                get {
-                    return ((RunnerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Runner_Result"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Runner_Result"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public RaceRow RaceRow {
                 get {
                     return ((RaceRow)(this.GetParentRow(this.Table.ParentRelations["FK_Race_Result"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Race_Result"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RunnerRow RunnerRow {
+                get {
+                    return ((RunnerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Runner_Result"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Runner_Result"]);
                 }
             }
             

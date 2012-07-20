@@ -32,6 +32,8 @@ namespace Apollo.Model
 
         internal BaseDataRowAdapterObject(T item)
         {
+            if (null == item)
+                throw new ArgumentNullException("item", "DataRow object may not be null");
             _Item = item;
         }
     }

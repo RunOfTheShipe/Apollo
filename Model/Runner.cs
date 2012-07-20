@@ -17,10 +17,11 @@ namespace Apollo.Model
 
     public class Runner : BaseDataRowAdapterObject<RawData.RunnerRow, RawData.RunnerDataTable, RawData>
     {
-        public Runner(RawData.RunnerRow runnerRow) : base(runnerRow)
-        {}
+        internal Runner(RawData.RunnerRow runnerRow)
+            : base(runnerRow)
+        { }
 
-        #region Properites on DataRow
+        #region Public properites on RawData.RunnerRow
         public string Name
         {
             get { return _Item.Name; }
@@ -77,40 +78,6 @@ namespace Apollo.Model
                        where resultRow.RunnerRow.ID == _Item.ID
                        select new Result(resultRow);
             }
-        }
-    }
-
-    public class Race : BaseDataRowAdapterObject<RawData.RaceRow, RawData.RaceDataTable, RawData>
-    {
-        public Race(RawData.RaceRow raceRow) : base(raceRow)
-        {}
-
-        public IEnumerable<Result> Results
-        {
-            get
-            {
-                return from resultRow in DataSet.Result
-                       where resultRow.RaceRow.ID == _Item.ID
-                       select new Result(resultRow);
-            }
-        }
-    }
-
-    public class Result : BaseDataRowAdapterObject<RawData.ResultRow, RawData.ResultDataTable, RawData>
-    {
-        public Result(RawData.ResultRow resultRow) : base(resultRow)
-        {}
-
-        private Race _Race = null;
-        public Race Race
-        {
-            get { return _Race ?? new Race(_Item.RaceRow); }
-        }
-
-        private Runner _Runner = null;
-        public Runner Runner
-        {
-            get { return _Runner ?? new Runner(_Item.RunnerRow); }
         }
     }
 }

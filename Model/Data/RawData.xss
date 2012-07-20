@@ -11,18 +11,6 @@
     <Shape ID="DesignTable:Result" ZOrder="3" X="532" Y="113" Height="105" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="101" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Race_Result" ZOrder="1" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>750</X>
-          <Y>126</Y>
-        </Point>
-        <Point>
-          <X>682</X>
-          <Y>126</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
     <Connector ID="DesignRelation:FK_Runner_Result" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
@@ -32,6 +20,18 @@
         <Point>
           <X>532</X>
           <Y>134</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FK_Race_Result" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>750</X>
+          <Y>126</Y>
+        </Point>
+        <Point>
+          <X>682</X>
+          <Y>126</Y>
         </Point>
       </RoutePoints>
     </Connector>

@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDataRowAdapterObject.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="Data\RawData.cs">
       <DependentUpon>RawData.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -52,6 +52,8 @@
       <DependentUpon>RawData.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="Runner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\RawData.xsc">
@@ -66,9 +68,7 @@
       <DependentUpon>RawData.xsd</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
