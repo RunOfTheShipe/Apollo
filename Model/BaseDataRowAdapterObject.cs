@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
+using System.Reflection;
+
 namespace Apollo.Model
 {
     /// <summary>
@@ -18,7 +20,7 @@ namespace Apollo.Model
         where U : DataTable
         where V : DataSet
     {
-        protected T _Item;
+        readonly protected T _Item;
 
         public U DataTable
         {

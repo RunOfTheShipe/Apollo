@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{649C0E4C-7635-4718-9F0C-B6B50217B4F3}</ProjectGuid>
+    <ProjectGuid>{2653378B-ED9F-44BA-9DA7-819EC1B51582}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Apollo.Model</RootNamespace>
-    <AssemblyName>ApolloModel</AssemblyName>
+    <RootNamespace>Apollo.ViewModel</RootNamespace>
+    <AssemblyName>ApolloViewModel</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,36 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApolloModel.cs" />
-    <Compile Include="BaseDataRowAdapterObject.cs" />
-    <Compile Include="Result.cs" />
-    <Compile Include="Data\RawData.cs">
-      <DependentUpon>RawData.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Data\RawData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RawData.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Race.cs" />
-    <Compile Include="Runner.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\RawData.xsc">
-      <DependentUpon>RawData.xsd</DependentUpon>
-    </None>
-    <None Include="Data\RawData.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RawData.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Data\RawData.xss">
-      <DependentUpon>RawData.xsd</DependentUpon>
-    </None>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{649C0E4C-7635-4718-9F0C-B6B50217B4F3}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

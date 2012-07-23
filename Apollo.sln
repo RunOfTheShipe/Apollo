@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo", "Apollo\Apollo.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{649C0E4C-7635-4718-9F0C-B6B50217B4F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{2653378B-ED9F-44BA-9DA7-819EC1B51582}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
