@@ -10,6 +10,13 @@ namespace Apollo.Model
 {
     public class Result : BaseDataRowAdapterObject<RawData.ResultRow, RawData.ResultDataTable, RawData>
     {
+        public static Result MakeResult(RawData dataSet)
+        {
+            var row = dataSet.Result.NewResultRow();
+            dataSet.Result.AddResultRow(row);
+            return new Result(row);
+        }
+
         internal Result(RawData.ResultRow resultRow) : base(resultRow)
         {}
 

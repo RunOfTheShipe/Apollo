@@ -10,6 +10,13 @@ namespace Apollo.Model
 {
     public class Race : BaseDataRowAdapterObject<RawData.RaceRow, RawData.RaceDataTable, RawData>
     {
+        public static Race MakeRace(RawData dataSet)
+        {
+            var raceRow = dataSet.Race.NewRaceRow();
+            dataSet.Race.AddRaceRow(raceRow);
+            return new Race(raceRow);
+        }
+
         internal Race(RawData.RaceRow raceRow)
             : base(raceRow)
         { }

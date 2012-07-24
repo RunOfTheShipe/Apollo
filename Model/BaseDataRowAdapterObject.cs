@@ -38,5 +38,7 @@ namespace Apollo.Model
                 throw new ArgumentNullException("item", "DataRow object may not be null");
             _Item = item;
         }
+
+        // bms_todo: See if there is a way to auto-generate properties that are linked to columns on the DataRow.
     }
 }

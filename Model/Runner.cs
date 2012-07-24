@@ -17,6 +17,14 @@ namespace Apollo.Model
 
     public class Runner : BaseDataRowAdapterObject<RawData.RunnerRow, RawData.RunnerDataTable, RawData>
     {
+        public static Runner MakeRunner(RawData dataSet)
+        {
+            var runnerRow = dataSet.Runner.NewRunnerRow();
+            dataSet.Runner.AddRunnerRow(runnerRow);
+
+            return new Runner(runnerRow);
+        }
+
         internal Runner(RawData.RunnerRow runnerRow)
             : base(runnerRow)
         { }
@@ -46,29 +54,6 @@ namespace Apollo.Model
             set { _Item.Gender = (int)value; }
         }
         #endregion
-
-        public static Runner MakeRunner(RawData dataSet)
-        {
-            var runnerRow = dataSet.Runner.NewRunnerRow();
-            dataSet.Runner.AddRunnerRow(runnerRow);
-            dataSet.Runner.AcceptChanges();
-
-            return new Runner(runnerRow);
-        }
-
-        public static Runner MakeRunner(RawData dataSet, string name, DateTime birthdate, int? weightLbs, Gender gender)
-        {
-            var runnerRow = dataSet.Runner.NewRunnerRow();
-            runnerRow.Name = name;
-            runnerRow.Birthdate = birthdate;
-            runnerRow.WeightLbs = (weightLbs.HasValue) ? weightLbs.Value : 0;
-            runnerRow.Gender = (int)gender;
-
-            dataSet.Runner.AddRunnerRow(runnerRow);
-            dataSet.Runner.AcceptChanges();
-
-            return new Runner(runnerRow);
-        }
 
         public IEnumerable<Result> Results
         {
