@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo", "Apollo\Apollo.csproj", "{11138466-96A6-4B8F-A1BF-7B9195F425EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{649C0E4C-7635-4718-9F0C-B6B50217B4F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Model", "Model\Apollo.Model.csproj", "{649C0E4C-7635-4718-9F0C-B6B50217B4F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{2653378B-ED9F-44BA-9DA7-819EC1B51582}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.ViewModel", "ViewModel\Apollo.ViewModel.csproj", "{2653378B-ED9F-44BA-9DA7-819EC1B51582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

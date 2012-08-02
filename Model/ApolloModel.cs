@@ -57,7 +57,7 @@ namespace Apollo.Model
         /// <summary>
         /// Initializes the underlying data model by reading in the contents of the given XML file.
         /// </summary>
-        internal void Initialize(string fullFilePath, bool bInMemoryOnly)
+        void Initialize(string fullFilePath, bool bInMemoryOnly)
         {
             _RawData = new RawData();
             _InMemoryOnly = bInMemoryOnly;
