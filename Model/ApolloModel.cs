@@ -23,7 +23,7 @@ namespace Apollo.Model
 
 
         private string _FullFilePath;
-        private RawData _RawData;
+        internal RawData _RawData;
         private bool _InMemoryOnly;
 
         #endregion

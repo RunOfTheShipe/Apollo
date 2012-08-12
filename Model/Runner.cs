@@ -15,7 +15,7 @@ namespace Apollo.Model
         Female = 'F'
     }
 
-    public class Runner : BaseDataRowAdapterObject<RawData.RunnerRow, RawData.RunnerDataTable, RawData>
+    public class Runner : DataRowAdapterObjectBase<RawData.RunnerRow, RawData.RunnerDataTable, RawData>
     {
         public static Runner MakeRunner(RawData dataSet)
         {

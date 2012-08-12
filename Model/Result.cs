@@ -8,7 +8,7 @@ using Apollo.Model.Data;
 
 namespace Apollo.Model
 {
-    public class Result : BaseDataRowAdapterObject<RawData.ResultRow, RawData.ResultDataTable, RawData>
+    public class Result : DataRowAdapterObjectBase<RawData.ResultRow, RawData.ResultDataTable, RawData>
     {
         public static Result MakeResult(RawData dataSet)
         {

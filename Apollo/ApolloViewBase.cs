@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Apollo.ViewModel
+using Apollo.ViewModel;
+
+namespace Apollo.View
 {
-    public class Class1
+    public class ApolloViewBase
     {
     }
 }

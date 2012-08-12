@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApolloModel.cs" />
-    <Compile Include="BaseDataRowAdapterObject.cs" />
+    <Compile Include="DataRowAdapterObjectBase.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="Data\RawData.cs">
       <DependentUpon>RawData.xsd</DependentUpon>

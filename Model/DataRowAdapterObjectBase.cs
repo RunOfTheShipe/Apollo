@@ -15,7 +15,7 @@ namespace Apollo.Model
     /// <typeparam name="T">Type of DataRow this adapter represents.</typeparam>
     /// <typeparam name="U">Type of DataTable the underlying DataRow exists in.</typeparam>
     /// <typeparam name="V">Type of DataSet the underlying DataRow exists in.</typeparam>
-    public abstract class BaseDataRowAdapterObject<T, U, V>
+    public abstract class DataRowAdapterObjectBase<T, U, V>
         where T : DataRow
         where U : DataTable
         where V : DataSet
@@ -32,7 +32,7 @@ namespace Apollo.Model
             get { return (V)DataTable.DataSet; }
         }
 
-        internal BaseDataRowAdapterObject(T item)
+        internal DataRowAdapterObjectBase(T item)
         {
             if (null == item)
                 throw new ArgumentNullException("item", "DataRow object may not be null");

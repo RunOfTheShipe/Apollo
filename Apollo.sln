@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo", "Apollo\Apollo.csproj", "{11138466-96A6-4B8F-A1BF-7B9195F425EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.View", "Apollo\Apollo.View.csproj", "{11138466-96A6-4B8F-A1BF-7B9195F425EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apollo.Model", "Model\Apollo.Model.csproj", "{649C0E4C-7635-4718-9F0C-B6B50217B4F3}"
 EndProject
@@ -32,6 +32,7 @@ Global
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Debug|x86.Build.0 = Debug|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{649C0E4C-7635-4718-9F0C-B6B50217B4F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
@@ -42,6 +43,7 @@ Global
 		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Debug|x86.Build.0 = Debug|Any CPU
 		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2653378B-ED9F-44BA-9DA7-819EC1B51582}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU

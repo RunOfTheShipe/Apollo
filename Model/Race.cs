@@ -8,15 +8,20 @@ using Apollo.Model.Data;
 
 namespace Apollo.Model
 {
-    public class Race : BaseDataRowAdapterObject<RawData.RaceRow, RawData.RaceDataTable, RawData>
+    public class Race : DataRowAdapterObjectBase<RawData.RaceRow, RawData.RaceDataTable, RawData>
     {
-        public static Race MakeRace(RawData dataSet)
+        internal static Race MakeRace(RawData dataSet)
         {
             var raceRow = dataSet.Race.NewRaceRow();
             dataSet.Race.AddRaceRow(raceRow);
             return new Race(raceRow);
         }
 
+        public static Race MakeRace(ApolloModel model)
+        {
+            return MakeRace(model._RawData);
+        }
+        
         internal Race(RawData.RaceRow raceRow)
             : base(raceRow)
         { }
@@ -26,6 +31,12 @@ namespace Apollo.Model
         {
             get { return _Item.RaceDate; }
             set { _Item.RaceDate = value; }
+        }
+
+        public string RaceName
+        {
+            get { return _Item.RaceName; }
+            set { _Item.RaceName = value; }
         }
 
         public double DistanceMiles
