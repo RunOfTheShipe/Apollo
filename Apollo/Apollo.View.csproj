@@ -59,14 +59,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\CreateRaceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ApolloViewBase.cs" />
+    <Compile Include="ApolloUserControl.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CreateRaceControl.xaml.cs">
+      <DependentUpon>CreateRaceControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -99,6 +106,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Model\Apollo.Model.csproj">
+      <Project>{649C0E4C-7635-4718-9F0C-B6B50217B4F3}</Project>
+      <Name>Apollo.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewModel\Apollo.ViewModel.csproj">
       <Project>{2653378B-ED9F-44BA-9DA7-819EC1B51582}</Project>
       <Name>Apollo.ViewModel</Name>
