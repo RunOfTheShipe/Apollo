@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Apollo.View.Views;
+using Apollo.Model;
+using Apollo.ViewModel;
+
 namespace Apollo
 {
     /// <summary>
@@ -53,20 +57,12 @@ namespace Apollo
             InitializeComponent();
         }
 
-        private void SelectFile_Click(object sender, RoutedEventArgs e)
+        private void LoadControl_Click(object sender, RoutedEventArgs e)
         {
-            // Prompt the user to 
-            SelectedFilePath = "File Selected";
-        }
+            var ctrl = new CreateRaceView();
+            ctrl.Presentation = new CreateModifyRaceViewModel(ApolloModel.MakeApolloModel(String.Empty, true), null);
 
-        private void LoadFile_Click(object sender, RoutedEventArgs e)
-        {
-            IsFileOpen = true;
-        }
-
-        private void SaveCloseFile_Click(object sender, RoutedEventArgs e)
-        {
-            IsFileOpen = false;
+            _ContentControl.Content = ctrl;
         }
     }
 }

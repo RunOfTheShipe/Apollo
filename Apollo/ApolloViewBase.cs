@@ -8,7 +8,7 @@ using Apollo.ViewModel;
 
 namespace Apollo.View
 {
-    public class ApolloUserControl<T> : UserControl
+    public class ApolloViewBase<T> : UserControl
         where T : ApolloViewModelBase
     {
         public T Presentation
